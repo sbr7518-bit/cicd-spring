@@ -2,7 +2,7 @@ name: Spring Boot Deploy via SSM
 
 on:
   push:
-    branches: [ "master" ] # 네 메인 브랜치가 main이라면 main으로 수정해줘!
+    branches: [ "master" ] 
 
 jobs:
   deploy:
@@ -44,3 +44,6 @@ jobs:
               "aws s3 cp s3://${{ secrets.BACKEND_BUCKET }}/app.jar /home/ec2-user/app/app.jar",
               "bash /home/ec2-user/app/deploy.sh"
             ]'
+
+
+            
